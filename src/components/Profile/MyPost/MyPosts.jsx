@@ -13,8 +13,8 @@ const MyPosts = (props) => {
                 <button>Add post</button>
             </div>
             <div className={classes.posts}>
-                <Post message={'Hi, how are you?'} likecounts = ' 20' />
-                <Post message={'It is my first post.'} likecounts = ' 15' />
+                <Post message={'Hi, how are you?'} likecounts=' 20'/>
+                <Post message={'It is my first post.'} likecounts=' 15'/>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 
 const Dialogs = (props) => {
-    return(
+    return (
         <div className={classes.dialogs}>
             Dialogs
         </div>
