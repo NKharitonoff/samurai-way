@@ -1,0 +1,19 @@
+.message {
+    width: max-content;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: gray;
+    border-style: solid;
+    border-width: thin;
+}
+
+.messageText {
+    margin: 5px;
+}
+
+.time {
+    font-size: small;
+    font-style: italic;
+    color: gray;
+}

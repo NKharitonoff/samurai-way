@@ -1,16 +1,18 @@
 import React from 'react';
 import classes from './Profile.module.css';
 import MyPosts from './MyPost/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
     return (
-        <div className={classes.content}>
-            <img alt='123' className={classes.photo}
-                 src='https://kscopemusic.com/wp-content/uploads/2019/07/200-banner-gradient-1184x200.png'/>
-            <div>
-                ava + description
+        <div>
+            <div className={classes.profilePhoto}>
+                <img alt='123' src='https://kscopemusic.com/wp-content/uploads/2019/07/200-banner-gradient-1184x200.png'/>
             </div>
-            <MyPosts/>
+            <div className={classes.profileContent}>
+                <ProfileInfo/>
+                <MyPosts/>
+            </div>
         </div>
     );
 }

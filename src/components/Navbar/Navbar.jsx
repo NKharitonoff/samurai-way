@@ -6,19 +6,20 @@ const Navbar = (props) => {
     return (
         <nav className={classes.nav}>
             <div className={classes.item}>
-                <NavLink to="/profile">Profile</NavLink>
+                <NavLink to="/profile" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Profile</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to="/dialogs">Messages</NavLink>
+                <NavLink to="/dialogs" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Messages</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink>News</NavLink>
+                <NavLink to="/news" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>News</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink>Music</NavLink>
+                <NavLink to="/music" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Music</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink>Settings</NavLink>
+                <NavLink to="/settings"
+                         style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Settings</NavLink>
             </div>
         </nav>
     );
