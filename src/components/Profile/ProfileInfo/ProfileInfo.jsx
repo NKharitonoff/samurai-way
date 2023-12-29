@@ -5,7 +5,8 @@ const ProfileInfo = (props) => {
     return (
         <div>
             <div>
-                Ava + Description
+                <img src={props.ava} />
+                {props.descr}
             </div>
         </div>
     );
