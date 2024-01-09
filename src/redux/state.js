@@ -11,6 +11,7 @@ let state = {
 
     dialogsPage: {
         dialogs: [
+            {id: 0, name: 'Tanya'},
             {id: 1, name: 'Dima'},
             {id: 2, name: 'Sasha'},
             {id: 3, name: 'Masha'},
@@ -26,8 +27,15 @@ let state = {
             {id: 2, message: "Where are you from?", timeStamp: "26.12.2023 10:20:23"},
             {id: 3, message: "Hey!", timeStamp: "27.12.2023 15:00:03"}
         ]
-    }
+    },
 
+    navbar: {
+        friends: [
+            {id: 0, name: 'Jenya'},
+            {id: 1, name: 'Sasha'},
+            {id: 2, name: 'Tolya'}
+        ]
+    }
 }
 
 export default state;

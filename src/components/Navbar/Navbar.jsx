@@ -1,8 +1,9 @@
 import React from "react";
 import classes from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={classes.nav}>
             <div className={classes.item}>
@@ -18,9 +19,11 @@ const Navbar = () => {
                 <NavLink to="/music" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Music</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to="/settings"
-                         style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Settings</NavLink>
+                <div className={classes.itemSettings}>
+                    <NavLink to="/settings" style={({isActive}) => ({color: isActive ? 'gray' : 'white'})}>Settings</NavLink>
+                </div>
             </div>
+            <Friends friends={props.state.friends}/>
         </nav>
     );
 }

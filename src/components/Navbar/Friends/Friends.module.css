@@ -1,0 +1,22 @@
+.friendsTitle {
+    color: grey;
+    font-size: 15pt;
+    padding: 50px 0 0;
+    text-align: center;
+}
+
+.friendItems {
+    text-align: center;
+    padding: 5px;
+    color: grey;
+    display: grid;
+    grid-template-areas: "f f f";
+
+}
+
+.friendItems img {
+    border-radius: 20px;
+    border-color: gray;
+    border-style: solid;
+    border-width: thin;
+}
