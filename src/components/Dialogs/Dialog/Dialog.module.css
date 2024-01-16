@@ -5,4 +5,8 @@
 
 .dialogItem img {
     width: 30px;
+    border-radius: 20px;
+    border-color: gray;
+    border-style: solid;
+    border-width: thin;
 }

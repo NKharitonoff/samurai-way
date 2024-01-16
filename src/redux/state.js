@@ -1,3 +1,7 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import navbarReducer from "./navbar-reducer";
+
 let store = {
     _state: {
         profilePage: {
@@ -28,7 +32,8 @@ let store = {
                 {id: 1, message: "Hello! I'm fine!", timeStamp: "26.12.2023 10:15:02"},
                 {id: 2, message: "Where are you from?", timeStamp: "26.12.2023 10:20:23"},
                 {id: 3, message: "Hey!", timeStamp: "27.12.2023 15:00:03"}
-            ]
+            ],
+            newMessageText: ""
         },
 
         navbar: {
@@ -39,6 +44,7 @@ let store = {
             ]
         }
     },
+
     _callSubscriber() {
         console.log('State changed');
     },
@@ -46,31 +52,19 @@ let store = {
     getState() {
         return this._state;
     },
+
     subscribe(observer) {
         this._callSubscriber = observer;
     },
 
-    /*addPost() {
-        let newPost = {id: 5, message: this._state.profilePage.newPostText, likesCount: 0};
-        this._state.profilePage.posts.push(newPost);
-        this._callSubscriber(this._state);
-        this._state.profilePage.newPostText = '';
-    },*/
-    /*updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber(this._state);
-    },*/
-
     dispatch(action) {
-        if(action.type === 'ADD-POST'){
-            let newPost = {id: 5, message: this._state.profilePage.newPostText, likesCount: 0};
-            this._state.profilePage.posts.push(newPost);
-            this._callSubscriber(this._state);
-            this._state.profilePage.newPostText = '';
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state)
-        }
+
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.navbar = navbarReducer(this._state.navbar, action);
+
+        this._callSubscriber(this._state);
+
     }
 }
 
