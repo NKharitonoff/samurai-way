@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Profile.module.css';
-import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
    return (
@@ -11,7 +11,7 @@ const Profile = (props) => {
             </div>
             <div className={classes.profileContent}>
                 <ProfileInfo ava='https://cdn.icon-icons.com/icons2/1812/PNG/512/4213460-account-avatar-head-person-profile-user_115386.png' descr="Profile description"/>
-                <MyPosts posts={props.profilePage.posts} newPostText={props.profilePage.newPostText} dispatch={props.dispatch}/>
+                <MyPostsContainer store={props.store}/>
             </div>
         </div>
     );
