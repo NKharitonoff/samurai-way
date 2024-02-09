@@ -30,11 +30,7 @@ const dialogsReducer = (state = ititialState, action) => {
                 message: state.newMessageText,
                 timeStamp: "20.01.2024 9:42:13"
             };
-            /*let stateCopy = {...state};
-            stateCopy.messages = [...state.messages];
-            stateCopy.messages.push(newMessage);
-            stateCopy.newMessageText = '';
-            return stateCopy;*/
+
             return {
                 ...state,
                 messages: [...state.messages, newMessage],
@@ -43,9 +39,7 @@ const dialogsReducer = (state = ititialState, action) => {
         }
 
         case UPDATE_NEW_MESSAGE_TEXT:
-            /*let stateCopy = {...state};
-            stateCopy.newMessageText = action.typeText;
-            return stateCopy;*/
+
             return {
                 ...state,
                 newMessageText: action.typeText

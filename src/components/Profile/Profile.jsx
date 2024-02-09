@@ -11,7 +11,7 @@ const Profile = (props) => {
             </div>
             <div className={classes.profileContent}>
                 <ProfileInfo ava='https://cdn.icon-icons.com/icons2/1812/PNG/512/4213460-account-avatar-head-person-profile-user_115386.png' descr="Profile description"/>
-                <MyPostsContainer store={props.store}/>
+                <MyPostsContainer />
             </div>
         </div>
     );
