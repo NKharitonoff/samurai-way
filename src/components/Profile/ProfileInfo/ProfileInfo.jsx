@@ -9,12 +9,12 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
-            <div className={classes.profilePhoto}>
-                <img alt='123' src='https://kscopemusic.com/wp-content/uploads/2019/07/200-banner-gradient-1184x200.png'/>
-            </div>
             <div>
                 <img src={props.profile.photos.large} />
-
+                <div>
+                    {props.profile.name}
+                    {props.profile.status}
+                </div>
             </div>
         </div>
     );

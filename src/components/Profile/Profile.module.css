@@ -2,7 +2,6 @@
     padding: 10px;
 }
 
-
-.profileContent img {
-    width: 50px;
+.profilePhoto img {
+    width: 100%;
 }
